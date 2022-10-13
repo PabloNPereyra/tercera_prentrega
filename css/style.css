@@ -1,0 +1,668 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/*Estilos basicos */
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.container--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column {
+  width: 100%;
+}
+
+/* Estilos del header */
+.main-header {
+  width: 100%;
+}
+
+.logo {
+  width: 45%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.main-header__contactInfo__phone {
+  background-color: rgb(245, 208, 245);
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.main-header__contactInfo__address {
+  padding: 10px;
+  margin: 0;
+}
+
+.main-header [class*=icon-]::before {
+  position: relative;
+  top: 2px;
+  right: 5px;
+}
+
+/* Estilos del menu y nav */
+.main-nav {
+  width: 100%;
+  position: relative;
+  z-index: 2000;
+  padding: 10px;
+}
+
+.icon-menu {
+  display: block;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-icon [class*=icon-] {
+  color: black;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 50%;
+}
+
+.social-icon__link {
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: rgba(87, 123, 243, 0.85);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.menu__link {
+  display: block;
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu__link:hover {
+  background: rgba(116, 158, 217, 0.85);
+}
+
+.menu__link--select {
+  background: rgba(26, 76, 242, 0.85);
+}
+
+/* Estilos de banner */
+.banner {
+  margin-top: -50px;
+  position: relative;
+}
+
+.banner::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  top: 0;
+}
+
+.banner__img {
+  width: 100%;
+  height: 650px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner__content {
+  width: 90%;
+  color: black;
+  text-align: center;
+  position: absolute;
+  z-index: 1500;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* Estilos principales */
+.group--color .container {
+  background-color: rgb(245, 208, 245);
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+/*   */
+.main__title {
+  margin: 15px 0;
+  font-size: 1.5em;
+}
+
+.column__title {
+  font-size: 1.3em;
+}
+
+.main__txt {
+  padding: 20px;
+}
+
+.main__abaout__description .column:nth-child(2) {
+  padding: 10px;
+}
+
+.main__receta__semana .column:nth-child(2) {
+  padding: 30px;
+}
+
+.group__title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 30px;
+}
+
+.destacados-semana .column {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.destacados-semana__img {
+  margin: auto;
+  max-width: 350px;
+}
+
+.destacados-semana__title {
+  font-size: 1.4em;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.destacados-semana__precio {
+  font-size: 1.5em;
+  color: rgb(231, 55, 231);
+  font-weight: bold;
+}
+
+/* Estilos del footer */
+.main--footer {
+  background: #222;
+  color: white;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 0.8em;
+}
+
+.main--footer .container {
+  align-items: flex-start;
+}
+
+.copy {
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.main--footer [class*=icon-] {
+  color: white;
+  text-decoration: none;
+}
+
+.main--footer [class*=icon-]::before {
+  position: relative;
+  top: 3px;
+  right: 5px;
+}
+
+.carrousel__title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 30px;
+}
+
+/* Estilos responsive */
+@media screen and (min-width: 480px) {
+  .logo {
+    color: white;
+  }
+  .main-header__contactInfo {
+    text-align: right;
+  }
+  .banner {
+    margin-top: -235px;
+    z-index: -1000;
+  }
+  .banner__content {
+    font-size: 2em;
+  }
+  .main-header__contactInfo__phone {
+    background: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  .main-header__contactInfo__address {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  .column--50 {
+    width: 49%;
+  }
+  .column--50-25 {
+    width: 49%;
+  }
+  .main__abaout__description .column:nth-child(2) {
+    padding-left: 20px;
+  }
+  .column--33 {
+    width: 32%;
+  }
+  .main-nav {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .destacados-semana .column {
+    border: 5px solid rgb(245, 208, 245);
+    padding: 5px;
+  }
+  .destacados-semana__img {
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main__title {
+    font-size: 2.2em;
+  }
+  .main__abaout__description {
+    margin-top: 30px;
+  }
+  .main__abaout__description .column:nth-child(2) {
+    font-size: 1em;
+  }
+  .main__abaout__description .column:nth-child(2) .column__txt {
+    line-height: 30px;
+  }
+  .column--50-25 {
+    width: 24.5%;
+  }
+  .column__title {
+    font-size: 1em;
+  }
+  .group__title {
+    font-size: 2.2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1000px;
+  }
+  .logo {
+    width: 25%;
+    height: auto;
+  }
+  .main-header__contactInfo__phone, .main-header__contactInfo__address {
+    padding-right: 0;
+    font-size: 1.5em;
+  }
+  .banner__content {
+    font-size: 2.5em;
+  }
+  .icon-menu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    width: auto;
+    height: auto;
+    position: static;
+  }
+  .menu__link {
+    padding: 20px;
+  }
+  .group--color .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .main__title {
+    font-size: 2.2em;
+  }
+  .main__txt {
+    font-size: 1.5em;
+  }
+  .main__receta__semana .container--flex {
+    display: flex;
+  }
+  /* Ver como solucionar */
+  .main__receta__semana .column--50 :nth-child(2) .column__txt {
+    line-height: 50px;
+  }
+  .group__title {
+    font-size: 2.5em;
+  }
+  .destacados-semana__title {
+    font-size: 2em;
+  }
+  .destacados-semana__precio {
+    font-size: 1.8em;
+  }
+  .main--footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+/* ESTILOS DE LA GALERIA */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+h1 {
+  color: #444;
+  text-align: center;
+}
+
+/* Estilos de la galeria */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+
+.gallery__item {
+  position: relative;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery__title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: #333;
+  width: 100px;
+  margin: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
+}
+
+/* Estilos de "NOSOTROS" */
+.banner__content {
+  color: white;
+}
+
+.our-team {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.our-team .container--flex {
+  align-items: flex-start;
+}
+
+.our-team__title {
+  color: rgb(245, 208, 245);
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.our-team__img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.our-team__txt {
+  padding: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .our-team__img {
+    width: 150px;
+    height: 150px;
+  }
+  .our-team__title {
+    font-size: 3em;
+  }
+  .our-team__txt {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .our-team__img {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .our-team__img {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .our-team__img {
+    width: 420px;
+    height: 420px;
+  }
+}
+/* Estilos del contacto */
+.group .group__tittle {
+  text-align: center;
+  margin: 15px;
+}
+
+.contact-information {
+  padding: 10px;
+  padding-top: 0;
+  margin-bottom: 30px;
+  border-right: 3px solid;
+}
+
+.contact-information .column__title {
+  font-weight: 100;
+}
+
+.contact-information [class*=icon-] {
+  font-size: 1.3em;
+  margin-right: 7px;
+  position: relative;
+  top: 5px;
+}
+
+.contact-information .social-icon {
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.contact-information .social-icon [class*=icon-] {
+  background: black;
+  color: white;
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+.formulario {
+  padding: 10;
+  padding-top: 0;
+}
+
+.formulario__label, .formulario__input-txt, .formulario__txtarea {
+  display: block;
+  width: 100%;
+}
+
+.formulario__input-txt {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.formulario__txtarea {
+  min-height: 100px;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.formulario__btn {
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  background-color: blueviolet;
+}
+
+.formulario__btn:hover {
+  background-color: rgb(94, 30, 154);
+}
+
+@media screen and (min-width: 480px) {
+  .contact .container--flex {
+    align-items: flex-start;
+  }
+  .contact-information p {
+    font-size: 0.75em;
+  }
+  .contact-information {
+    border-right: 2px solid blueviolet;
+    border-bottom: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-information p {
+    font-size: 1em;
+  }
+  .contact-information .column__title {
+    font-size: 1.5em;
+  }
+}
+/* Estilos preguntas Frecuentes */
+/* Estilos de "NOSOTROS" */
+.container--question {
+  background-color: blueviolet;
+}
+
+.banner__content {
+  color: white;
+}
+
+.questions {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.questions .container--flex {
+  align-items: flex-start;
+}
+
+.questions__title {
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.questions__txt {
+  padding: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .questions__title {
+    font-size: 1.5em;
+  }
+  .questions__txt {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .questions__title {
+    font-size: 1.6em;
+  }
+  .questions__txt {
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .questions__title {
+    font-size: 1.8em;
+  }
+  .questions__txt {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .questions__title {
+    font-size: 2em;
+  }
+  .questions__txt {
+    font-size: 1.8em;
+  }
+}/*# sourceMappingURL=style.css.map */

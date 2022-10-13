@@ -1,0 +1,28 @@
+/* Estilos del header */
+
+.main-header{
+    width: 100%;
+}
+
+.logo{
+    width: 45%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.main-header__contactInfo__phone{
+    background-color: rgb(245, 208, 245);
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.main-header__contactInfo__address{
+    padding: 10px;
+    margin: 0;
+}
+
+.main-header [class*="icon-"]::before{
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
